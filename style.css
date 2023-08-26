@@ -1,19 +1,22 @@
-.body {
-    background-color: rgb(119, 109, 114);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 
 header {
-    height: 180px;
-    background-image: linear-gradient(pink, rgb(106, 27, 75), rgb(36, 9, 33)) 
+    height: 140px;
+    background-image: linear-gradient(#836eaa, #b6acd1, #e4e0ee) 
 }
 
-.nav{
+header .nav{
     display: flex;
     justify-content: center;
 }
 
-.navbar {
+header .nav .navbar {
     display: inline;
     float: left;
     margin: 30px;
@@ -22,55 +25,97 @@ header {
     font-style: italic;
 }
 
-li:hover {
-    background-color: grey;
+header .nav li:hover {
+    background: linear-gradient(#8ec06c, #c4dff6);
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.card {
-    margin: auto;
-    margin-bottom: 30px;
     
 }
 
-h4 {
-    font-size: 30px;
-   cursor: pointer;
-   background-image: linear-gradient(pink, grey) ;
+header .nav a:hover {
+    
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.box {
+.body {
+    background-image: url(https://picsum.photos/id/437/467/467);
+    opacity: 0.8
+}
+
+
+.body .card {
+    margin: auto;
+    margin-bottom: 30px;
+
+    
+}
+
+.body .card h4 {
+    font-size: 36px;
+   cursor: pointer;
+   background-image: linear-gradient(pink, #d8d6d6) ;
+}
+
+
+
+.container {
+    text-align: center;
+    
+}
+
+.container .box {
     width: 300px;
     height: 200px;
     text-align: center;
     justify-content: center;
+    background-color: #b6acd1;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 1px 2px lavender;
+    text-shadow: 1px 2px black;
+    font-size: 20px;
+    position: relative;
+    animation : box 3s infinite;
+    animation-timing-function: ease;
+
     
 }
 
-.first {
+@keyframes box {
+    from {left : 0px}
+    to {left: 50px}
+
+}
+
+.container .box h3 {
+    text-decoration: dotted;
+    margin-bottom: 15px;
+    font-size: 35px;
+
+}
+
+.container .first {
     float: left;
-   
     margin-left: 200px;
     margin-right: 50px;
 }
 
-.second {
+.container .second {
     float : left;
     
 }
 
-.container {
-    text-align: center;
-    background-color: blanchedalmond;
-    
-}
 
-.footer2 {
+
+.container  .footer2 {
     list-style-type: none;
-    font-size: 15px;
+    font-size: 18px;
 }
 
-.icecek {
+
+
+.body .card .icecek {
     position: relative;
     animation : drink 5s infinite;
     animation-timing-function: linear;
@@ -80,7 +125,7 @@ h4 {
     to {left: 20px}
 
 }
-.kahve {
+.body .card .kahve {
     position: relative;
     animation : coffee 5s infinite;
     animation-timing-function: linear;
@@ -90,7 +135,7 @@ h4 {
     to {left: 20px}
 
 }
-.tatli {
+.body .card .tatli {
     position: relative;
     animation : dessert 5s infinite;
     animation-timing-function: linear;
